@@ -1,6 +1,6 @@
 {
-  "name": "cursor10x-mcp",
-  "version": "1.4.1",
+  "name": "cursor-memory-mcp",
+  "version": "1.0.0",
   "description": "Memory System for Cursor using MCP - Provides persistent context awareness for Claude",
   "main": "index.js",
   "type": "module",
@@ -14,7 +14,7 @@
     "prepublishOnly": "npm test"
   },
   "bin": {
-    "cursor10x-mcp": "index.js"
+    "cursor-memory-mcp": "index.js"
   },
   "files": [
     "index.js",
@@ -31,24 +31,14 @@
     "context",
     "persistence"
   ],
-  "author": "aurda012",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aurda012/cursor10x-mcp.git"
-  },
-  "bugs": {
-    "url": "https://github.com/aurda012/cursor10x-mcp/issues"
-  },
-  "homepage": "https://github.com/aurda012/cursor10x-mcp",
   "license": "MIT",
   "dependencies": {
-    "@libsql/client": "^0.5.6",
-    "@modelcontextprotocol/sdk": "^1.9.0",
-    "better-sqlite3": "^11.9.1",
-    "dotenv": "^16.4.7"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.9"
+    "@libsql/client": "^0.15.10",
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "@tursodatabase/database": "^0.4.3",
+    "better-sqlite3": "^12.2.0",
+    "dotenv": "^17.2.1",
+    "mcps-logger": "^1.0.0"
   },
   "engines": {
     "node": ">=18.0.0"

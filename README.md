@@ -1,964 +1,382 @@
-![DevContext - The Next Evolution in AI Development Context](https://i.postimg.cc/sghKLKf6/Dev-Context-banner.png)
 
-<div align="center">
-  
-# 🚀 **Cursor10x is now DevContext** 🚀
 
-### Cursor10x has evolved into DevContext - A more powerful, dedicated context system for developers
+### 🔥 **CursorMemory 将 AI 辅助开发推向新高度** 🔥
 
-<table align="center">
-  <tr>
-    <td align="center"><b>🧠 Project-Centric</b></td>
-    <td align="center"><b>📊 Relationship Graphs</b></td>
-    <td align="center"><b>⚡ High Performance</b></td>
-  </tr>
-  <tr>
-    <td align="center">One database per project</td>
-    <td align="center">Intelligent code connections</td>
-    <td align="center">Minimal resource needs</td>
-  </tr>
-</table>
+**🔄 持续上下文感知** - 复杂的检索方法，专注于真正重要的信息
+**📊 结构化元数据** - 从代码库结构细化到单个函数
+**🧠 自适应学习** - 持续从您的开发模式中学习并适应
+**🤖 完全自主** - 后台自动运行的自管理上下文系统
+**📚 外部文档集成** - 自动检索并集成相关的外部文档
+**📋 工作流集成** - 内置无缝的任务管理工作流
 
-### 🔥 **DevContext takes AI development to the next level** 🔥
-
-**🔄 Continuous Context Awareness** - Sophisticated retrieval methods focusing on what matters
-**📊 Structured Metadata** - From repository structure down to individual functions
-**🧠 Adaptive Learning** - Continuously learns from and adapts to your development patterns
-**🤖 Completely Autonomous** - Self-managing context system that works in the background
-**📚 External Documentation** - Automatically retrieves and integrates relevant documentation
-**📋 Workflow Integration** - Seamless task management workflow built-in
-
-#### 👀 **Be on the lookout** 👀
-
-The DevContext Project Generator is launching in the next couple days and will create a COMPLETE set up for your project to literally 10x your development workflow.
-
-<p align="center">
-  <a href="https://github.com/aurda012/devcontext" style="display: inline-block; background-color: rgba(40, 230, 210); color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;">Visit DevContext Repository</a>
-</p>
-
-<i>DevContext is a cutting-edge Model Context Protocol (MCP) server providing developers with continuous, project-centric context awareness that understands your codebase at a deeper level.</i>
-
-</div>
 
 ---
 
-## Overview
+## 概述
 
-The Cursor10x Memory System creates a persistent memory layer for AI assistants (specifically Claude), enabling them to retain and recall:
+CursorMemory 记忆系统为 AI 助手（特别是 Claude）创建了一个持久化记忆层，使它们能够保留并回忆：
 
-- Recent messages and conversation history
-- Active files currently being worked on
-- Important project milestones and decisions
-- Technical requirements and specifications
-- Chronological sequences of actions and events (episodes)
-- Code snippets and structures from your codebase
-- Semantically similar content based on vector embeddings
-- Related code fragments through semantic similarity
-- File structures with function and variable relationships
+- 最近的消息和对话历史
+- 当前正在处理的活跃文件
+- 重要的项目里程碑和决策
+- 技术需求和规范
+- 行动和事件的时间序列（情节）
+- 代码库中的代码片段和结构
+- 基于向量嵌入的语义相似内容
+- 通过语义相似性关联的代码片段
+- 包含函数和变量关系的文件结构
 
-This memory system bridges the gap between stateless AI interactions and continuous development workflows, allowing for more productive and contextually aware assistance.
+该记忆系统桥接了无状态 AI 交互与持续开发工作流之间的鸿沟，从而实现更高效、更具上下文感知能力的辅助。
 
-## System Architecture
+## 系统架构
 
-The memory system is built on four core components:
+该记忆系统构建在四个核心组件之上：
 
-1. **MCP Server**: Implements the Model Context Protocol to register tools and process requests
-2. **Memory Database**: Uses Turso database for persistent storage across sessions
-3. **Memory Subsystems**: Organizes memory into specialized systems with distinct purposes
-4. **Vector Embeddings**: Transforms text and code into numerical representations for semantic search
+1. **MCP 服务器**：实现模型上下文协议，用于注册工具并处理请求
+2. **记忆数据库**：使用 Turso 数据库跨会话持久化存储数据
+3. **记忆子系统**：将记忆组织成具有不同用途的专门系统
+4. **向量嵌入**：将文本和代码转换为数值表示，以实现语义搜索
 
-### Memory Types
+### 记忆类型
 
-The system implements four complementary memory types:
+系统实现了四种互补的记忆类型：
 
-1. **Short-Term Memory (STM)**
+1. **短期记忆 (STM)**
+   - 存储最近的消息和活跃文件
+   - 为当前交互提供即时上下文
+   - 根据近期性和重要性自动排序
 
-   - Stores recent messages and active files
-   - Provides immediate context for current interactions
-   - Automatically prioritizes by recency and importance
+2. **长期记忆 (LTM)**
+   - 存储永久性项目信息，如里程碑和决策
+   - 维护架构和设计背景
+   - 无限期保留高重要性的信息
 
-2. **Long-Term Memory (LTM)**
+3. **情节记忆 (Episodic)**
+   - 记录事件的时间序列
+   - 维护动作之间的因果关系
+   - 为项目历史提供时间背景
 
-   - Stores permanent project information like milestones and decisions
-   - Maintains architectural and design context
-   - Preserves high-importance information indefinitely
+4. **语义记忆 (Semantic)**
+   - 存储消息、文件和代码片段的向量嵌入
+   - 支持基于语义相似性的内容检索
+   - 自动为代码结构建立索引以供上下文检索
+   - 追踪代码组件之间的关系
+   - 提供全代码库的相似性搜索
 
-3. **Episodic Memory**
+## 功能特性
 
-   - Records chronological sequences of events
-   - Maintains causal relationships between actions
-   - Provides temporal context for project history
+- **持久化上下文**：跨多个会话维护对话和项目上下文
+- **基于重要性的存储**：根据可配置的重要性级别对信息进行优先级排序
+- **多维记忆**：结合短期、长期、情节和语义记忆系统
+- **全面检索**：从所有记忆子系统提供统一的上下文
+- **健康监控**：内置诊断和状态报告功能
+- **看板生成**：为对话开始创建信息化上下文看板
+- **数据库持久化**：将所有记忆数据存储在 Turso 数据库中，并自动创建架构
+- **向量嵌入**：创建文本和代码的数值表示，用于相似性搜索
+- **高级向量存储**：利用 Turso 的 F32_BLOB 和向量函数实现高效嵌入存储
+- **ANN 搜索**：支持近似最近邻搜索，实现快速相似性匹配
+- **代码索引**：自动检测并索引代码结构（函数、类、变量）
+- **语义搜索**：基于含义而非精确文本匹配来查找相关内容
+- **相关性评分**：根据与当前查询的相关性对上下文条目进行排序
+- **代码结构检测**：识别并提取跨多种语言的代码组件
+- **自动嵌入生成**：自动为已索引内容创建向量嵌入
+- **交叉引用检索**：跨不同文件和组件查找相关代码
 
-4. **Semantic Memory**
-   - Stores vector embeddings of messages, files, and code snippets
-   - Enables retrieval of content based on semantic similarity
-   - Automatically indexes code structures for contextual retrieval
-   - Tracks relationships between code components
-   - Provides similarity-based search across the codebase
+## 安装指南
 
-## Features
+### 先决条件
 
-- **Persistent Context**: Maintains conversation and project context across multiple sessions
-- **Importance-Based Storage**: Prioritizes information based on configurable importance levels
-- **Multi-Dimensional Memory**: Combines short-term, long-term, episodic, and semantic memory systems
-- **Comprehensive Retrieval**: Provides unified context from all memory subsystems
-- **Health Monitoring**: Includes built-in diagnostics and status reporting
-- **Banner Generation**: Creates informative context banners for conversation starts
-- **Database Persistence**: Stores all memory data in Turso database with automatic schema creation
-- **Vector Embeddings**: Creates numerical representations of text and code for similarity search
-- **Advanced Vector Storage**: Utilizes Turso's F32_BLOB and vector functions for efficient embedding storage
-- **ANN Search**: Supports Approximate Nearest Neighbor search for fast similarity matching
-- **Code Indexing**: Automatically detects and indexes code structures (functions, classes, variables)
-- **Semantic Search**: Finds related content based on meaning rather than exact text matches
-- **Relevance Scoring**: Ranks context items by relevance to the current query
-- **Code Structure Detection**: Identifies and extracts code components across multiple languages
-- **Auto-Embedding Generation**: Automatically creates vector embeddings for indexed content
-- **Cross-Reference Retrieval**: Finds related code across different files and components
+- Node.js 18 或更高版本
+- npm 或 yarn 包管理器
+- Turso 数据库账号
 
-## Installation
+### 设置步骤
 
-### Prerequisites
-
-- Node.js 18 or higher
-- npm or yarn package manager
-- Turso database account
-
-### Setup Steps
-
-1. **Configure Turso Database:**
+1. **配置 Turso 数据库：**
 
 ```bash
-# Install Turso CLI
+# 安装 Turso CLI
 curl -sSfL https://get.turso.tech/install.sh | bash
 
-# Login to Turso
+# 登录 Turso
 turso auth login
 
-# Create a database
-turso db create cursor10x-mcp
+# 创建数据库
+turso db create CursorMemory-mcp
 
-# Get database URL and token
-turso db show cursor10x-mcp --url
-turso db tokens create cursor10x-mcp
+# 获取数据库 URL 和 Token
+turso db show CursorMemory-mcp --url
+turso db tokens create CursorMemory-mcp
 ```
 
-Or you can visit [Turso](https://turso.tech/) and sign up and proceed to create the database and get proper credentials. The free plan will more than cover your project memory.
+或者您可以访问 [Turso](https://turso.tech/) 注册并创建数据库以获取相应的凭据。免费计划完全足够存储您的项目记忆。
 
-2. **Configure Cursor MCP:**
+2. **配置 Cursor MCP：**
 
-Update `.cursor/mcp.json` in your project directory with the database url and turso auth token:
+在您的项目目录中更新 `.cursor/mcp.json`，填入数据库 URL 和 Turso 授权 Token：
 
 ```json
 {
   "mcpServers": {
-    "cursor10x-mcp": {
+    "CursorMemory-mcp": {
       "command": "npx",
-      "args": ["cursor10x-mcp"],
+      "args": ["cursor-memory-mcp"],
       "enabled": true,
       "env": {
-        "TURSO_DATABASE_URL": "your-turso-database-url",
-        "TURSO_AUTH_TOKEN": "your-turso-auth-token"
+        "TURSO_DATABASE_URL": "您的-turso-数据库-url",
+        "TURSO_AUTH_TOKEN": "您的-turso-授权-token"
       }
     }
   }
 }
 ```
 
-## Tool Documentation
+## 工具文档
 
-### System Tools
+### 系统工具
 
-#### `mcp_cursor10x_initConversation`
+#### `initConversation`
 
-Initializes a conversation by storing the user message, generating a banner, and retrieving context in one operation. This unified tool replaces the need for separate generateBanner, getComprehensiveContext, and storeUserMessage calls at the beginning of each conversation.
+通过一次操作存储用户消息、生成看板并检索上下文，从而初始化对话。这个统一工具取代了在每次对话开始时分别调用 generateBanner、getComprehensiveContext 和 storeUserMessage 的需要。
 
-**Parameters:**
+**参数：**
 
-- `content` (string, required): Content of the user message
-- `importance` (string, optional): Importance level ("low", "medium", "high", "critical"), defaults to "low"
-- `metadata` (object, optional): Additional metadata for the message
+- `content` (string, 必填): 用户消息的内容
+- `importance` (string, 可选): 重要性级别 ("low", "medium", "high", "critical")，默认为 "low"
+- `metadata` (object, 可选): 消息的附加元数据
 
-**Returns:**
+**返回：**
 
-- Object with two sections:
-  - `display`: Contains the banner to be shown to the user
-  - `internal`: Contains the comprehensive context for the agent's use
+- 包含两个部分的对象的：
+  - `display`: 包含要显示给用户的看板
+  - `internal`: 包含供代理使用的综合上下文
 
-**Example:**
+**示例：**
 
 ```javascript
-// Initialize a conversation
-const result = await mcp_cursor10x_initConversation({
-  content: "I need to implement a login system for my app",
+// 初始化对话
+const result = await initConversation({
+  content: "我需要为我的应用实现一个登录系统",
   importance: "medium",
 });
-// Result: {
+// 结果示例: {
 //   "status": "ok",
 //   "display": {
 //     "banner": {
 //       "status": "ok",
+//       "formatted_banner": "🧠 Memory System: Active\n🗂️ Total Memories: 42\n🕚 Latest Memory: Today at 14:30",
 //       "memory_system": "active",
 //       "mode": "turso",
-//       "message_count": 42,
-//       "active_files_count": 3,
-//       "last_accessed": "4/15/2023, 2:30:45 PM"
+//       "memory_count": 42,
+//       "last_accessed": "Today at 14:30"
 //     }
 //   },
 //   "internal": {
-//     "context": { ... comprehensive context data ... },
+//     "context": { ... 综合上下文数据 ... },
 //     "messageStored": true,
 //     "timestamp": 1681567845123
 //   }
 // }
 ```
 
-#### `mcp_cursor10x_endConversation`
+#### `endConversation`
 
-Ends a conversation by combining multiple operations in one call: storing the assistant's final message, recording a milestone for what was accomplished, and logging an episode in the episodic memory. This unified tool replaces the need for separate storeAssistantMessage, storeMilestone, and recordEpisode calls at the end of each conversation.
+通过一次调用结合多个操作来结束对话：存储助手的最终消息、记录所完成工作的里程碑，并在情节记忆中记录一个情节。这个统一工具取代了在每次对话结束时分别调用 storeAssistantMessage、storeMilestone 和 recordEpisode 的需要。
 
-**Parameters:**
+**参数：**
 
-- `content` (string, required): Content of the assistant's final message
-- `milestone_title` (string, required): Title of the milestone to record
-- `milestone_description` (string, required): Description of what was accomplished
-- `importance` (string, optional): Importance level ("low", "medium", "high", "critical"), defaults to "medium"
-- `metadata` (object, optional): Additional metadata for all records
+- `content` (string, 必填): 助手最终消息的内容
+- `milestone_title` (string, 必填): 要记录的里程碑标题
+- `milestone_description` (string, 必填): 对所完成工作的详细描述
+- `importance` (string, 可选): 重要性级别 ("low", "medium", "high", "critical")，默认为 "medium"
+- `metadata` (object, 可选): 所有记录的附加元数据
 
-**Returns:**
+**返回：**
 
-- Object with status and results of each operation
+- 包含状态和每项操作结果的对象
 
-**Example:**
+**示例：**
 
 ```javascript
-// End a conversation with finalization steps
-const result = await mcp_cursor10x_endConversation({
-  content:
-    "I've implemented the authentication system with JWT tokens as requested",
-  milestone_title: "Authentication Implementation",
-  milestone_description:
-    "Implemented secure JWT-based authentication with refresh tokens",
+// 通过完成步骤结束对话
+const result = await endConversation({
+  content: "我已经按要求实现了带有 JWT 令牌的身份验证系统",
+  milestone_title: "身份验证实现",
+  milestone_description: "实现了安全的基于 JWT 的身份验证及刷新令牌功能",
   importance: "high",
 });
-// Result: {
+// 结果示例: {
 //   "status": "ok",
-//   "results": {
-//     "assistantMessage": {
-//       "stored": true,
-//       "timestamp": 1681568500123
-//     },
-//     "milestone": {
-//       "title": "Authentication Implementation",
-//       "stored": true,
-//       "timestamp": 1681568500123
-//     },
-//     "episode": {
-//       "action": "completion",
-//       "stored": true,
-//       "timestamp": 1681568500123
-//     }
-//   }
+//   "messageId": 123,
+//   "timestamp": 1681568500123
 // }
 ```
 
-#### `mcp_cursor10x_checkHealth`
+#### `checkHealth`
 
-Checks the health of the memory system and its database connection.
+检查记忆系统及其数据库连接的健康状态。
 
-**Parameters:**
+**参数：**
 
-- None required
+- 无
 
-**Returns:**
+**返回：**
 
-- Object with health status and diagnostics
+- 包含健康状态和诊断信息的对象
 
-**Example:**
+#### `getMemoryStats`
 
-```javascript
-// Check memory system health
-const health = await mcp_cursor10x_checkHealth({});
-// Result: {
-//   "status": "ok",
-//   "mode": "turso",
-//   "message_count": 42,
-//   "active_files_count": 3,
-//   "current_directory": "/users/project",
-//   "timestamp": "2023-04-15T14:30:45.123Z"
-// }
-```
+检索有关记忆系统的详细统计信息。
 
-#### `mcp_cursor10x_getMemoryStats`
+**参数：**
 
-Retrieves detailed statistics about the memory system.
+- 无
 
-**Parameters:**
+**返回：**
 
-- None required
+- 包含综合记忆统计信息的对象
 
-**Returns:**
+#### `getComprehensiveContext`
 
-- Object with comprehensive memory statistics
+从所有记忆子系统检索统一的上下文，结合短期、长期和情节记忆。
 
-**Example:**
+**参数：**
 
-```javascript
-// Get memory statistics
-const stats = await mcp_cursor10x_getMemoryStats({});
-// Result: {
-//   "status": "ok",
-//   "stats": {
-//     "message_count": 42,
-//     "active_file_count": 3,
-//     "milestone_count": 7,
-//     "decision_count": 12,
-//     "requirement_count": 15,
-//     "episode_count": 87,
-//     "oldest_memory": "2023-03-10T09:15:30.284Z",
-//     "newest_memory": "2023-04-15T14:30:45.123Z"
-//   }
-// }
-```
+- `query` (string, 可选): 用于语义搜索以查找相关上下文的查询
 
-#### `mcp_cursor10x_getComprehensiveContext`
+**返回：**
 
-Retrieves a unified context from all memory subsystems, combining short-term, long-term, and episodic memory.
+- 包含来自所有记忆系统的合并上下文的对象
 
-**Parameters:**
+### 短期记忆工具
 
-- None required
+#### `storeUserMessage`
 
-**Returns:**
+在短期记忆系统中存储用户消息。
 
-- Object with consolidated context from all memory systems
+#### `storeAssistantMessage`
 
-**Example:**
+在短期记忆系统中存储助手消息。
 
-```javascript
-// Get comprehensive context
-const context = await mcp_cursor10x_getComprehensiveContext({});
-// Result: {
-//   "status": "ok",
-//   "context": {
-//     "shortTerm": {
-//       "recentMessages": [...],
-//       "activeFiles": [...]
-//     },
-//     "longTerm": {
-//       "milestones": [...],
-//       "decisions": [...],
-//       "requirements": [...]
-//     },
-//     "episodic": {
-//       "recentEpisodes": [...]
-//     },
-//     "system": {
-//       "healthy": true,
-//       "timestamp": "2023-04-15T14:30:45.123Z"
-//     }
-//   }
-// }
-```
+#### `trackActiveFile`
 
-### Short-Term Memory Tools
+追踪用户正在访问或修改的活跃文件。
 
-#### `mcp_cursor10x_storeUserMessage`
+#### `getRecentMessages`
 
-Stores a user message in the short-term memory system.
+从短期记忆中检索最近的消息。
 
-**Parameters:**
+#### `getActiveFiles`
 
-- `content` (string, required): Content of the message
-- `importance` (string, optional): Importance level ("low", "medium", "high", "critical"), defaults to "low"
-- `metadata` (object, optional): Additional metadata for the message
+从短期记忆中检索活跃文件。
 
-**Returns:**
+### 长期记忆工具
 
-- Object with status and timestamp
+#### `storeMilestone`
 
-**Example:**
+在长期记忆中存储项目里程碑。
 
-```javascript
-// Store a user message
-const result = await mcp_cursor10x_storeUserMessage({
-  content: "We need to implement authentication for our API",
-  importance: "high",
-  metadata: {
-    topic: "authentication",
-    priority: 1,
-  },
-});
-// Result: {
-//   "status": "ok",
-//   "timestamp": 1681567845123
-// }
-```
+#### `storeDecision`
 
-#### `mcp_cursor10x_storeAssistantMessage`
+在长期记忆中存储项目决策。
 
-Stores an assistant message in the short-term memory system.
+#### `storeRequirement`
 
-**Parameters:**
+在长期记忆中存储项目需求。
 
-- `content` (string, required): Content of the message
-- `importance` (string, optional): Importance level ("low", "medium", "high", "critical"), defaults to "low"
-- `metadata` (object, optional): Additional metadata for the message
+### 情节记忆工具
 
-**Returns:**
+#### `recordEpisode`
 
-- Object with status and timestamp
+在情节记忆中记录一个情节（动作）。
 
-**Example:**
+#### `getRecentEpisodes`
+
+从情节记忆中检索最近的情节。
+
+### 向量记忆工具
+
+#### `manageVector`
+
+用于管理向量嵌入的统一工具，包含存储、搜索、更新和删除操作。
+
+**参数：**
+
+- `operation` (string, 必填): 要执行的操作 ("store", "search", "update", "delete")
+- `contentId` (number, 可选): 向量代表的内容 ID
+- `contentType` (string, 可选): 内容类型 (message, file, snippet 等)
+- `vector` (array, 可选): 向量数据（数字数组）
+- `metadata` (object, 可选): 附加元数据
+- `limit` (number, 可选): 搜索结果限制
+- `threshold` (number, 可选): 搜索相似度阈值
+
+#### `diagnoseVectors`
+
+运行向量存储系统的诊断以识别问题。
+
+**参数：**
+
+- 无
+
+**返回：**
+
+- 包含诊断结果的对象
+
+## 数据库模式
+
+记忆系统自动创建并维护以下数据库表：
+
+- `messages`: 存储用户和助手消息
+- `active_files`: 追踪文件活动
+- `milestones`: 记录项目里程碑
+- `decisions`: 存储项目决策
+- `requirements`: 维护项目需求
+- `episodes`: 记录行动和事件的时间轴
+- `vectors`: 存储用于语义搜索的向量嵌入
+- `code_files`: 追踪已索引的代码文件
+- `code_snippets`: 存储提取的代码结构
+
+## 示例工作流
+
+### 优化的会话开始
 
 ```javascript
-// Store an assistant message
-const result = await mcp_cursor10x_storeAssistantMessage({
-  content: "I recommend implementing JWT authentication with refresh tokens",
-  importance: "medium",
-  metadata: {
-    topic: "authentication",
-    contains_recommendation: true,
-  },
-});
-// Result: {
-//   "status": "ok",
-//   "timestamp": 1681567870456
-// }
-```
-
-#### `mcp_cursor10x_trackActiveFile`
-
-Tracks an active file being accessed or modified by the user.
-
-**Parameters:**
-
-- `filename` (string, required): Path to the file being tracked
-- `action` (string, required): Action performed on the file (open, edit, close, etc.)
-- `metadata` (object, optional): Additional metadata for the tracking event
-
-**Returns:**
-
-- Object with status, filename, action and timestamp
-
-**Example:**
-
-```javascript
-// Track an active file
-const result = await mcp_cursor10x_trackActiveFile({
-  filename: "src/auth/jwt.js",
-  action: "edit",
-  metadata: {
-    changes: "Added refresh token functionality",
-  },
-});
-// Result: {
-//   "status": "ok",
-//   "filename": "src/auth/jwt.js",
-//   "action": "edit",
-//   "timestamp": 1681567900789
-// }
-```
-
-#### `mcp_cursor10x_getRecentMessages`
-
-Retrieves recent messages from the short-term memory.
-
-**Parameters:**
-
-- `limit` (number, optional): Maximum number of messages to retrieve, defaults to 10
-- `importance` (string, optional): Filter by importance level
-
-**Returns:**
-
-- Object with status and array of messages
-
-**Example:**
-
-```javascript
-// Get recent high importance messages
-const messages = await mcp_cursor10x_getRecentMessages({
-  limit: 5,
-  importance: "high",
-});
-// Result: {
-//   "status": "ok",
-//   "messages": [
-//     {
-//       "id": 42,
-//       "role": "user",
-//       "content": "We need to implement authentication for our API",
-//       "created_at": "2023-04-15T14:30:45.123Z",
-//       "importance": "high",
-//       "metadata": {"topic": "authentication", "priority": 1}
-//     },
-//     ...
-//   ]
-// }
-```
-
-#### `mcp_cursor10x_getActiveFiles`
-
-Retrieves active files from the short-term memory.
-
-**Parameters:**
-
-- `limit` (number, optional): Maximum number of files to retrieve, defaults to 10
-
-**Returns:**
-
-- Object with status and array of active files
-
-**Example:**
-
-```javascript
-// Get recent active files
-const files = await mcp_cursor10x_getActiveFiles({
-  limit: 3,
-});
-// Result: {
-//   "status": "ok",
-//   "files": [
-//     {
-//       "id": 15,
-//       "filename": "src/auth/jwt.js",
-//       "last_accessed": "2023-04-15T14:30:45.123Z",
-//       "metadata": {"changes": "Added refresh token functionality"}
-//     },
-//     ...
-//   ]
-// }
-```
-
-### Long-Term Memory Tools
-
-#### `mcp_cursor10x_storeMilestone`
-
-Stores a project milestone in the long-term memory.
-
-**Parameters:**
-
-- `title` (string, required): Title of the milestone
-- `description` (string, required): Description of the milestone
-- `importance` (string, optional): Importance level, defaults to "medium"
-- `metadata` (object, optional): Additional metadata for the milestone
-
-**Returns:**
-
-- Object with status, title, and timestamp
-
-**Example:**
-
-```javascript
-// Store a project milestone
-const result = await mcp_cursor10x_storeMilestone({
-  title: "Authentication System Implementation",
-  description:
-    "Implemented JWT authentication with refresh tokens and proper error handling",
-  importance: "high",
-  metadata: {
-    version: "1.0.0",
-    files_affected: ["src/auth/jwt.js", "src/middleware/auth.js"],
-  },
-});
-// Result: {
-//   "status": "ok",
-//   "title": "Authentication System Implementation",
-//   "timestamp": 1681568000123
-// }
-```
-
-#### `mcp_cursor10x_storeDecision`
-
-Stores a project decision in the long-term memory.
-
-**Parameters:**
-
-- `title` (string, required): Title of the decision
-- `content` (string, required): Content of the decision
-- `reasoning` (string, optional): Reasoning behind the decision
-- `importance` (string, optional): Importance level, defaults to "medium"
-- `metadata` (object, optional): Additional metadata for the decision
-
-**Returns:**
-
-- Object with status, title, and timestamp
-
-**Example:**
-
-```javascript
-// Store a project decision
-const result = await mcp_cursor10x_storeDecision({
-  title: "JWT for Authentication",
-  content: "Use JWT tokens for API authentication with refresh token rotation",
-  reasoning:
-    "JWTs provide stateless authentication with good security and performance characteristics",
-  importance: "high",
-  metadata: {
-    alternatives_considered: ["Session-based auth", "OAuth2"],
-    decision_date: "2023-04-15",
-  },
-});
-// Result: {
-//   "status": "ok",
-//   "title": "JWT for Authentication",
-//   "timestamp": 1681568100456
-// }
-```
-
-#### `mcp_cursor10x_storeRequirement`
-
-Stores a project requirement in the long-term memory.
-
-**Parameters:**
-
-- `title` (string, required): Title of the requirement
-- `content` (string, required): Content of the requirement
-- `importance` (string, optional): Importance level, defaults to "medium"
-- `metadata` (object, optional): Additional metadata for the requirement
-
-**Returns:**
-
-- Object with status, title, and timestamp
-
-**Example:**
-
-```javascript
-// Store a project requirement
-const result = await mcp_cursor10x_storeRequirement({
-  title: "Secure Authentication",
-  content:
-    "System must implement secure authentication with password hashing, rate limiting, and token rotation",
-  importance: "critical",
-  metadata: {
-    source: "security audit",
-    compliance: ["OWASP Top 10", "GDPR"],
-  },
-});
-// Result: {
-//   "status": "ok",
-//   "title": "Secure Authentication",
-//   "timestamp": 1681568200789
-// }
-```
-
-### Episodic Memory Tools
-
-#### `mcp_cursor10x_recordEpisode`
-
-Records an episode (action) in the episodic memory.
-
-**Parameters:**
-
-- `actor` (string, required): Actor performing the action (user, assistant, system)
-- `action` (string, required): Type of action performed
-- `content` (string, required): Content or details of the action
-- `importance` (string, optional): Importance level, defaults to "low"
-- `context` (string, optional): Context for the episode
-
-**Returns:**
-
-- Object with status, actor, action, and timestamp
-
-**Example:**
-
-```javascript
-// Record an episode
-const result = await mcp_cursor10x_recordEpisode({
-  actor: "assistant",
-  action: "implementation",
-  content: "Created JWT authentication middleware with token verification",
-  importance: "medium",
-  context: "authentication",
-});
-// Result: {
-//   "status": "ok",
-//   "actor": "assistant",
-//   "action": "implementation",
-//   "timestamp": 1681568300123
-// }
-```
-
-#### `mcp_cursor10x_getRecentEpisodes`
-
-Retrieves recent episodes from the episodic memory.
-
-**Parameters:**
-
-- `limit` (number, optional): Maximum number of episodes to retrieve, defaults to 10
-- `context` (string, optional): Filter by context
-
-**Returns:**
-
-- Object with status and array of episodes
-
-**Example:**
-
-```javascript
-// Get recent episodes in the authentication context
-const episodes = await mcp_cursor10x_getRecentEpisodes({
-  limit: 5,
-  context: "authentication",
-});
-// Result: {
-//   "status": "ok",
-//   "episodes": [
-//     {
-//       "id": 87,
-//       "actor": "assistant",
-//       "action": "implementation",
-//       "content": "Created JWT authentication middleware with token verification",
-//       "timestamp": "2023-04-15T14:45:00.123Z",
-//       "importance": "medium",
-//       "context": "authentication"
-//     },
-//     ...
-//   ]
-// }
-```
-
-### Vector-Based Memory Tools
-
-#### `mcp_cursor10x_manageVector`
-
-Unified tool for managing vector embeddings with operations for store, search, update, and delete.
-
-**Parameters:**
-
-- `operation` (string, required): Operation to perform ("store", "search", "update", "delete")
-- `contentId` (number, optional): ID of the content this vector represents (for store, update, delete)
-- `contentType` (string, optional): Type of content ("message", "file", "snippet", etc.)
-- `vector` (array, optional): Vector data as array of numbers (for store, update) or query vector (for search)
-- `vectorId` (number, optional): ID of the vector to update or delete
-- `limit` (number, optional): Maximum number of results for search operation, defaults to 10
-- `threshold` (number, optional): Similarity threshold for search operation, defaults to 0.7
-- `metadata` (object, optional): Additional info about the vector
-
-**Returns:**
-
-- Object with status and operation results
-
-**Example:**
-
-```javascript
-// Store a vector embedding
-const result = await mcp_cursor10x_manageVector({
-  operation: "store",
-  contentId: 42,
-  contentType: "message",
-  vector: [0.1, 0.2, 0.3, ...], // 128-dimensional vector
-  metadata: {
-    topic: "authentication",
-    language: "en"
-  }
-});
-// Result: {
-//   "status": "ok",
-//   "operation": "store",
-//   "vectorId": 15,
-//   "timestamp": 1681570000123
-// }
-
-// Search for similar vectors
-const searchResult = await mcp_cursor10x_manageVector({
-  operation: "search",
-  vector: [0.1, 0.2, 0.3, ...], // query vector
-  contentType: "snippet", // optional filter
-  limit: 5,
-  threshold: 0.8
-});
-// Result: {
-//   "status": "ok",
-//   "operation": "search",
-//   "results": [
-//     {
-//       "vectorId": 10,
-//       "contentId": 30,
-//       "contentType": "snippet",
-//       "similarity": 0.92,
-//       "metadata": { ... }
-//     },
-//     ...
-//   ]
-// }
-```
-
-## Database Schema
-
-The memory system automatically creates and maintains the following database tables:
-
-- `messages`: Stores user and assistant messages
-
-  - `id`: Unique identifier
-  - `timestamp`: Creation timestamp
-  - `role`: Message role (user/assistant)
-  - `content`: Message content
-  - `importance`: Importance level
-  - `archived`: Whether the message is archived
-
-- `active_files`: Tracks file activity
-
-  - `id`: Unique identifier
-  - `filename`: Path to the file
-  - `action`: Last action performed
-  - `last_accessed`: Timestamp of last access
-
-- `milestones`: Records project milestones
-
-  - `id`: Unique identifier
-  - `title`: Milestone title
-  - `description`: Detailed description
-  - `timestamp`: Creation timestamp
-  - `importance`: Importance level
-
-- `decisions`: Stores project decisions
-
-  - `id`: Unique identifier
-  - `title`: Decision title
-  - `content`: Decision content
-  - `reasoning`: Decision reasoning
-  - `timestamp`: Creation timestamp
-  - `importance`: Importance level
-
-- `requirements`: Maintains project requirements
-
-  - `id`: Unique identifier
-  - `title`: Requirement title
-  - `content`: Requirement content
-  - `timestamp`: Creation timestamp
-  - `importance`: Importance level
-
-- `episodes`: Chronicles actions and events
-
-  - `id`: Unique identifier
-  - `timestamp`: Creation timestamp
-  - `actor`: Actor performing the action
-  - `action`: Type of action
-  - `content`: Action details
-  - `importance`: Importance level
-  - `context`: Action context
-
-- `vectors`: Stores vector embeddings for semantic search
-
-  - `id`: Unique identifier
-  - `content_id`: ID of the referenced content
-  - `content_type`: Type of content (message, file, snippet)
-  - `vector`: Binary representation of the embedding vector
-  - `metadata`: Additional metadata for the vector
-
-- `code_files`: Tracks indexed code files
-
-  - `id`: Unique identifier
-  - `file_path`: Path to the file
-  - `language`: Programming language
-  - `last_indexed`: Timestamp of last indexing
-  - `metadata`: Additional file metadata
-
-- `code_snippets`: Stores extracted code structures
-  - `id`: Unique identifier
-  - `file_id`: Reference to the parent file
-  - `start_line`: Starting line number
-  - `end_line`: Ending line number
-  - `symbol_type`: Type of code structure (function, class, variable)
-  - `content`: The code snippet content
-
-## Example Workflows
-
-### Optimized Conversation Start
-
-```javascript
-// Initialize conversation with a single tool call
-// This replaces the need for three separate calls at the start of the conversation
-const result = await mcp_cursor10x_initConversation({
-  content: "I need help implementing authentication in my React app",
+// 通过单个工具调用初始化对话
+const result = await initConversation({
+  content: "我需要帮助在我的 React 应用中实现身份验证",
   importance: "high",
 });
 
-// Display the banner to the user
-console.log("Memory System Status:", result.display.banner);
+// 向用户显示看板
+console.log("记忆系统状态:", result.display.banner);
 
-// Use the context internally (do not show to user)
+// 在内部使用上下文（不要显示给用户）
 const context = result.internal.context;
-// Use context for more informed assistance
 ```
 
-### Starting a New Session (Alternative Method)
+## 故障排除
 
-```javascript
-// Generate a memory banner at the start
-mcp_cursor10x_generateBanner({});
+### 常见问题
 
-// Get comprehensive context
-mcp_cursor10x_getComprehensiveContext({});
+1. **数据库连接问题**
+   - 检查您的 Turso 数据库 URL 和授权 Token 是否正确
+   - 检查到 Turso 服务的网络连接
+2. **数据缺失**
+   - 检查数据是否以适当的重要性级别存储
+   - 验证检索查询参数（限制、过滤器）
+3. **性能问题**
+   - 使用 `getMemoryStats()` 监控记忆统计信息
+   - 如果数据库变得过大，考虑归档旧数据
 
-// Store the user message
-mcp_cursor10x_storeUserMessage({
-  content: "I need help with authentication",
-  importance: "high",
-});
-```
+## 重要性级别
 
-### Tracking User Activity
+在记忆中存储项时，请使用适当的重要性级别：
 
-```javascript
-// Track an active file
-await mcp_cursor10x_trackActiveFile({
-  filename: "src/auth/jwt.js",
-  action: "edit",
-});
-```
+- **low**: 一般信息、例行操作、日常对话
+- **medium**: 有用的上下文、标准工作项、常规特性
+- **high**: 关键决策、重大特性、重要架构元素
+- **critical**: 核心架构、安全关注点、数据完整性问题
 
-## Troubleshooting
-
-### Common Issues
-
-1. **Database Connection Problems**
-
-   - Verify your Turso database URL and authentication token are correct
-   - Check network connectivity to the Turso service
-   - Verify firewall settings allow the connection
-
-2. **Missing Data**
-
-   - Check that data was stored with appropriate importance level
-   - Verify the retrieval query parameters (limit, filters)
-   - Check the database health with `mcp_cursor10x_checkHealth()`
-
-3. **Performance Issues**
-   - Monitor memory statistics with `mcp_cursor10x_getMemoryStats()`
-   - Consider archiving old data if database grows too large
-   - Optimize retrieval by using more specific filters
-
-### Diagnostic Steps
-
-1. Check system health:
-
-   ```javascript
-   const health = await mcp_cursor10x_checkHealth({});
-   console.log("System Health:", health);
-   ```
-
-2. Verify memory statistics:
-
-   ```javascript
-   const stats = await mcp_cursor10x_getMemoryStats({});
-   console.log("Memory Stats:", stats);
-   ```
-
-3. Generate a status banner:
-   ```javascript
-   const banner = await mcp_cursor10x_generateBanner({});
-   console.log("Memory Banner:", banner);
-   ```
-
-## Importance Levels
-
-When storing items in memory, use appropriate importance levels:
-
-- **low**: General information, routine operations, everyday conversations
-- **medium**: Useful context, standard work items, regular features
-- **high**: Critical decisions, major features, important architecture elements
-- **critical**: Core architecture, security concerns, data integrity issues
-
-## License
+## 许可协议
 
 MIT
